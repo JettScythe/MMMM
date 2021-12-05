@@ -40,8 +40,15 @@ const Home: NextPage = () => {
           <button onClick={addMMMMToken}>Add 🌙🌙🌙🌙</button>
         </p>
         <div className={styles.faq}>
-          <h3>FAQ: </h3>
-          <p> What is the story about MMMM?  There is only 1000. That is all.</p>
+          <h2>FAQ: </h2>
+          <div>
+            <h3> Q. What is the story about 🌙🌙🌙🌙? </h3>
+            <p>A. There is only 1000. That is all. </p>
+          </div>
+          <div>
+            <h3>Q. Is 🌙🌙🌙🌙 a meme?</h3>
+            <p>A. No it is a memememememememe.</p>
+          </div>
         </div>
       </main>
     </div>
