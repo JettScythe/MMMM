@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { useState } from 'react'
 import styles from '../styles/Home.module.css'
 
+declare var window: any;
 const Home: NextPage = () => {
   const [log, setLog] = useState<string[]>([])
   const addToken = (params: any) =>
