@@ -1,33 +1,16 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import styles from '../styles/Home.module.css'
 
 declare var window: any;
 const Home: NextPage = () => {
   const [log, setLog] = useState<string[]>([])
-  const [isPlaying, setIsPlaying] = useState<boolean>(true)
+  const [isPlaying, setIsPlaying] = useState(true)
   const addToken = (params: any) =>
     window.ethereum.request({ method: 'wallet_watchAsset', params })
       .then(() => setLog([...log, 'Success, Token added!']))
       .catch((error: Error) => setLog([...log, `Error: ${error.message}`]))
-
-  const toggleAudio = () => {
-      if (isPlaying) {
-        document.getElementById('audio')!.pause()
-        setIsPlaying(false)
-      } else {
-        document.getElementById('audio')!.play()
-        setIsPlaying(true)
-      }
-    }
-/* 
-  useEffect(() => {
-    setTimeout(() => {
-      toggleAudio()
-    }, 1000)
-  }, []) */
-
 
   const addMMMMToken = () =>
   addToken({
@@ -39,6 +22,18 @@ const Home: NextPage = () => {
       image: 'https://i.imgur.com/GypGIsZ.jpeg'
     }
   })
+
+  const toggleAudio = () => {
+    if (isPlaying) {
+      document.getElementById('audio').pause()
+    }
+    else {
+      document.getElementById('audio').play()
+    }
+    setIsPlaying(!isPlaying)
+  }
+
+
   return (
     <div className={styles.container}>
       <Head>
@@ -71,9 +66,9 @@ const Home: NextPage = () => {
         </div>
       </main>
       <div>
-        <audio id="audio" src="/bigpimpin1.mp3" autoPlay={isPlaying} />
-        <button onClick={toggleAudio}>{isPlaying ? 'Pause' : 'Play'}</button>
+        <audio id="audio" src="/bigpimpin1.mp3" autoPlay={true} />
       </div>
+      <button onClick={toggleAudio}>{isPlaying ? 'Pause' : 'Play'}</button>
     </div>
   )
 }
