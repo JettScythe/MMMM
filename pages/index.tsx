@@ -25,10 +25,10 @@ const Home: NextPage = () => {
 
   const toggleAudio = () => {
     if (isPlaying) {
-      document.getElementById('audio').pause()
+      document.getElementById('audio')!.pause()
     }
     else {
-      document.getElementById('audio').play()
+      document.getElementById('audio')!.play()
     }
     setIsPlaying(!isPlaying)
   }
