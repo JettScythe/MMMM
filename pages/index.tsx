@@ -45,7 +45,7 @@ const Home: NextPage = () => {
           <code className={styles.code}>CA: 0x2b591190FF951F60CB9424664155e57A402c1AdE</code>
           <br />
           <button onClick={addMMMMToken}>Add 🌙🌙🌙🌙</button>
-          <button><a href="https://t.me/M00Nx4" target="_blank">TG</a></button>
+          <button><a href="https://t.me/M00Nx4" target="_blank" rel="noreferrer">TG</a></button>
         </p>
         <div className={styles.faq}>
           <h2>FAQ: </h2>
