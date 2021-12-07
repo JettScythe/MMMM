@@ -6,26 +6,15 @@ import styles from '../styles/Home.module.css'
 declare var window: any;
 const Home: NextPage = () => {
   const [log, setLog] = useState<string[]>([])
-  const [isPlaying, setIsPlaying] = useState<boolean>(false)
   const addToken = (params: any) =>
     window.ethereum.request({ method: 'wallet_watchAsset', params })
       .then(() => setLog([...log, 'Success, Token added!']))
       .catch((error: Error) => setLog([...log, `Error: ${error.message}`]))
 
-  const toggleAudio = () => {
-      if (isPlaying) {
-        document.getElementById('audio').pause()
-        setIsPlaying(false)
-      } else {
-        document.getElementById('audio').play()
-        setIsPlaying(true)
-      }
-    }
 
   useEffect(() => {
-    setTimeout(() => {
-      toggleAudio()
-    }, 1000)
+    const bigP: HTMLMediaElement = document.getElementById('audio') as HTMLMediaElement
+    document.body.addEventListener("click", () => {bigP!.play()})
   }, [])
 
 
@@ -71,7 +60,7 @@ const Home: NextPage = () => {
         </div>
       </main>
       <div>
-        <audio id="audio" src="/bigpimpin1.mp3" autoPlay={isPlaying} />
+        <audio id="audio" src="/bigpimpin1.mp3" />
       </div>
     </div>
   )
