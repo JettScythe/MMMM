@@ -59,8 +59,8 @@ const Home: NextPage = () => {
             <p>A. No it is a memememememememe.</p>
           </div>
           <div>
-            <h3>Q. The roadmap button doesn't direct me to the right place&apos; what gives?</h3>
-            <p>A. Sometimes there are DNS issues&apos; try this <button><a href="https://www.theraleighregister.com/the-2021-to-infinity--roadmap.html" target="_blank" rel="noreferrer">roadmap </a> </button> instead.</p>
+            <h3>Q. The roadmap button doesn&apos;t direct me to the right place, what gives?</h3>
+            <p>A. Sometimes there are DNS issues, try this <button><a href="https://www.theraleighregister.com/the-2021-to-infinity--roadmap.html" target="_blank" rel="noreferrer">roadmap </a> </button> instead.</p>
           </div>
         </div>
       </main>
