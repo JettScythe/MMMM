@@ -46,6 +46,7 @@ const Home: NextPage = () => {
           <br />
           <button onClick={addMMMMToken}>Add 🌙🌙🌙🌙</button>
           <button><a href="https://t.me/M00Nx4" target="_blank" rel="noreferrer">TG</a></button>
+          <button><a href="https://t.co/nQYHt3Uw1T" target="_blank" rel="noreferrer">Roadmap</a></button>
         </p>
         <div className={styles.faq}>
           <h2>FAQ: </h2>
