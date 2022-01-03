@@ -45,8 +45,7 @@ const Home: NextPage = () => {
           <code className={styles.code}>CA: 0x2b591190FF951F60CB9424664155e57A402c1AdE</code>
           <br />
           <button onClick={addMMMMToken}>Add 🌙🌙🌙🌙</button>
-          <button><a href="https://t.me/M00Nx4" target="_blank" rel="noreferrer">Chat (English)</a></button>
-          <button><a href="https://t.me/M00Nx3" target="_blank" rel="noreferrer">聊天（中文)</a></button>
+          <button><a href="https://t.me/M00Nx4" target="_blank" rel="noreferrer">Chat</a></button>
           <button><a href="https://t.co/nQYHt3Uw1T" target="_blank" rel="noreferrer">Roadmap</a></button>
         </p>
         <div className={styles.faq}>
